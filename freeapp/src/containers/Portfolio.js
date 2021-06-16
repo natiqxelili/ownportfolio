@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import * as commonActions from "../redux/actions/Common";
 import * as userActions from "../redux/actions/User";
+import dashPhoto from "../assets/img/dashPhoto.jpg";
 
 class Portfolio extends Component {
     constructor() {
@@ -30,7 +31,14 @@ class Portfolio extends Component {
 
     render() {
         return (
-            <div>
+            <div className="flx-row">
+                <div className="tw-w-full tw-flex tw-flex-col tw-overflow-y-auto tw-h-screen-93">
+                    <div className='row tw-bg-white m-2 tw-border tw-border-gray-600 py-3'>
+                        <div className='col-sm-12 px-3'>
+                            <img src={dashPhoto} className="tw-w-1/4 tw-float-right tw-rounded" />
+                        </div>
+                    </div>
+                </div>
 
             </div>
         )
