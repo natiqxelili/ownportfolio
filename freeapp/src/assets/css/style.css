@@ -864,3 +864,8 @@ ul.header-dropdown-menu li:not(:last-child) {
     right: 5px;
     padding-right: 5px;
 }
+
+.bg-img-overlay{
+    background-blend-mode: lighten;
+    background-color: rgba(255, 255, 255, 0.486);
+}
