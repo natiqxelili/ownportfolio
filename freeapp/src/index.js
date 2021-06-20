@@ -3,6 +3,7 @@ import './assets/css/paper.css';
 import './assets/css/tailwind.css';
 import './assets/css/bootstrap.min.css';
 import './assets/css/style.css';
+import './assets/css/media-responsive.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
