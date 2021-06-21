@@ -5,6 +5,11 @@ import * as commonActions from "../redux/actions/Common";
 import * as userActions from "../redux/actions/User";
 import dashPhoto from "../assets/img/dashPhoto.jpg";
 import backPhoto from "../assets/img/bg-techno.png";
+import adnsu from "../assets/img/logos/adnsu-logo-new.png";
+import unec from "../assets/img/logos/UNEC_1.png";
+import school15 from "../assets/img/logos/school_15.jfif";
+import school44 from "../assets/img/logos/school_44.jfif";
+import itmim from "../assets/img/logos/itmim.png";
 import * as Icon from "react-icons/fi"
 
 class Portfolio extends Component {
@@ -13,6 +18,7 @@ class Portfolio extends Component {
         this.state = {
             username: "",
             password: "",
+            timeline: "education"
         };
     }
 
@@ -32,13 +38,14 @@ class Portfolio extends Component {
     };
 
     render() {
+        let { timeline } = this.state;
         return (
             <div
                 className="tw-w-screen tw-h-screen tw-bg-cover tw-bg-no-repeat bg-img-overlay"
                 style={{ backgroundImage: `url(${backPhoto})` }}
             >
                 <div className="flx-row">
-                    <div className="tw-w-full tw-flex tw-flex-col tw-overflow-y-auto tw-h-screen-93">
+                    <div className="tw-w-full tw-flex tw-flex-col tw-overflow-y-auto tw-h-full">
                         <div className="flx-row tw-bg-white tw-m-32 tw-rounded tw-border tw-border-gray-600 p-3">
                             <div className="tw-flex-1 tw-text-left tw-align-middle tw-m-auto tw-pl-40">
                                 <div className="tw-text-6xl tw-font-serif tw-text-gray-900 tw-font-bold">Natig Khalili</div>
@@ -55,6 +62,88 @@ class Portfolio extends Component {
                                 </div>
                             </div>
                             <img alt="" src={dashPhoto} className="tw-w-1/4 tw-rounded" />
+                        </div>
+                        <div className="mb-5" style={{
+                            backgroundImage: '-webkit-linear-gradient(0deg,#766dff 0%,#88f3ff 100%)'
+                        }}>
+                            <div className="flx-row tw-justify-center tw-py-20">
+                                <button type="button" className={`btn btn-lg ${timeline === 'education' ? 'btn-light' : 'tw-bg-blue-300 tw-text-white'} tw-text-lg mx-1 tw-px-20 tw-py-4`} onClick={() => { this.setState({ timeline: 'education' }) }}>Təhsil</button>
+                                <button type="button" className={`btn btn-lg ${timeline === 'work' ? 'btn-light' : 'tw-bg-blue-300 tw-text-white'} tw-text-lg mx-1 tw-px-20 tw-py-4`} onClick={() => { this.setState({ timeline: 'work' }) }}>İş təcrübəsi</button>
+                            </div>
+                            {timeline === "education" &&
+                                <div className="timeline tw-mb-20">
+                                    <div className="timeline-container timeline-left">
+                                        <div className="timeline-content">
+                                            <div className="tw-flex">
+                                                <div className="tw-flex-1">
+                                                    <h5>2001-2007</h5>
+                                                    <p>Gəncə şəhəri, 15 nömrəli tam orta məktəb</p>
+                                                </div>
+                                                <img src={school15} alt="" className="tw-w-1/5 tw-rounded tw-ml-2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="timeline-container timeline-right">
+                                        <div className="timeline-content">
+                                            <div className="tw-flex">
+                                                <div className="tw-flex-1">
+                                                    <h5>2007-2009</h5>
+                                                    <p>Gəncə şəhəri, 44 saylı Bağça məktəb lisey kompleksi</p>
+                                                </div>
+                                                <img src={school44} alt="" className="tw-w-1/5 tw-rounded tw-ml-2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="timeline-container timeline-left">
+                                        <div className="timeline-content">
+                                            <div className="tw-flex">
+                                                <div className="tw-flex-1">
+                                                    <h5>2009-2012</h5>
+                                                    <p>Gəncə şəhəri, 15 nömrəli tam orta məktəb</p>
+                                                </div>
+                                                <img src={school15} alt="" className="tw-w-1/5 tw-rounded tw-ml-2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="timeline-container timeline-right">
+                                        <div className="timeline-content">
+                                            <div className="tw-flex">
+                                                <div className="tw-flex-1">
+                                                    <h5>2012-2016</h5>
+                                                    <p>Azərbaycan Dövlət İqtisad Universiteti</p>
+                                                </div>
+                                                <img src={unec} alt="" className="tw-w-1/5 tw-rounded tw-ml-2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="timeline-container timeline-left">
+                                        <div className="timeline-content">
+                                            <div className="tw-flex">
+                                                <div className="tw-flex-1">
+                                                    <h5>2016-2018</h5>
+                                                    <p>Azərbaycan Dövlət Neft və Sənaye Universiteti</p>
+                                                </div>
+                                                <img src={adnsu} alt="" className="tw-w-1/5 tw-rounded tw-ml-2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            {timeline === "work" &&
+                                <div className="timeline tw-mb-20">
+                                    <div className="timeline-container timeline-left">
+                                        <div className="timeline-content">
+                                            <div className="tw-flex">
+                                                <div className="tw-flex-1">
+                                                    <h5>2017-2021</h5>
+                                                    <p>İnformasiya texnologiyaları və məlumat idarəetmə mərkəzi</p>
+                                                </div>
+                                                <img src={itmim} alt="" className="tw-w-1/5 tw-rounded tw-ml-2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
                         </div>
                     </div>
                 </div>

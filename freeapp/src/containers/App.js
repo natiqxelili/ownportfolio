@@ -24,7 +24,7 @@ class App extends React.Component {
     render() {
         const { user, common } = this.props.state;
         return (
-            <div className='tw-w-full tw-overflow-hidden tw-h-screen' style={{ backgroundColor: '#9bcdd9' }}>
+            <div className='tw-w-full tw-overflow-y-auto tw-overflow-x-hidden tw-h-screen' style={{ backgroundColor: '#9bcdd9' }}>
 
                 {user?.login ? (common.startup ?
                     <Startup /> :
