@@ -10,6 +10,7 @@ import unec from "../assets/img/logos/UNEC_1.png";
 import school15 from "../assets/img/logos/school_15.jfif";
 import school44 from "../assets/img/logos/school_44.jfif";
 import itmim from "../assets/img/logos/itmim.png";
+import dsx from "../assets/img/logos/dsx.png";
 import * as Icon from "react-icons/fi"
 
 class Portfolio extends Component {
@@ -76,7 +77,7 @@ class Portfolio extends Component {
                                         <div className="timeline-content">
                                             <div className="tw-flex">
                                                 <div className="tw-flex-1">
-                                                    <h5>2001-2007</h5>
+                                                    <h5>2001-2006</h5>
                                                     <p>Gəncə şəhəri, 15 nömrəli tam orta məktəb</p>
                                                 </div>
                                                 <img src={school15} alt="" className="tw-w-1/5 tw-rounded tw-ml-2" />
@@ -87,7 +88,7 @@ class Portfolio extends Component {
                                         <div className="timeline-content">
                                             <div className="tw-flex">
                                                 <div className="tw-flex-1">
-                                                    <h5>2007-2009</h5>
+                                                    <h5>2006-2009</h5>
                                                     <p>Gəncə şəhəri, 44 saylı Bağça məktəb lisey kompleksi</p>
                                                 </div>
                                                 <img src={school44} alt="" className="tw-w-1/5 tw-rounded tw-ml-2" />
@@ -135,7 +136,29 @@ class Portfolio extends Component {
                                         <div className="timeline-content">
                                             <div className="tw-flex">
                                                 <div className="tw-flex-1">
-                                                    <h5>2017-2021</h5>
+                                                    <h5>2017-2019</h5>
+                                                    <p>İnformasiya texnologiyaları və məlumat idarəetmə mərkəzi</p>
+                                                </div>
+                                                <img src={itmim} alt="" className="tw-w-1/5 tw-rounded tw-ml-2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="timeline-container timeline-right">
+                                        <div className="timeline-content">
+                                            <div className="tw-flex">
+                                                <div className="tw-flex-1">
+                                                    <h5>2019-2020</h5>
+                                                    <p>Hərbi xidmət</p>
+                                                </div>
+                                                <img src={dsx} alt="" className="tw-w-1/5 tw-rounded tw-ml-2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="timeline-container timeline-left">
+                                        <div className="timeline-content">
+                                            <div className="tw-flex">
+                                                <div className="tw-flex-1">
+                                                    <h5>2020-NOW</h5>
                                                     <p>İnformasiya texnologiyaları və məlumat idarəetmə mərkəzi</p>
                                                 </div>
                                                 <img src={itmim} alt="" className="tw-w-1/5 tw-rounded tw-ml-2" />
