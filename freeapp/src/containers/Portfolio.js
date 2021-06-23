@@ -47,7 +47,7 @@ class Portfolio extends Component {
             >
                 <div className="flx-row">
                     <div className="tw-w-full tw-flex tw-flex-col tw-overflow-y-auto tw-h-full">
-                        <div className="flx-row tw-bg-white tw-m-32 tw-rounded tw-border tw-border-gray-600 p-3">
+                        <div className="flx-row tw-bg-white tw-m-32 tw-rounded tw-border tw-border-gray-600 p-3 tw-z-10">
                             <div className="tw-flex-1 tw-text-left tw-align-middle tw-m-auto tw-pl-40">
                                 <div className="tw-text-6xl tw-font-serif tw-text-gray-900 tw-font-bold">Natig Khalili</div>
                                 <div className="tw-text-2xl tw-text-gray-700">Middle Full-Stack Web Developer (Node, React, Asp.net)</div>
@@ -63,6 +63,11 @@ class Portfolio extends Component {
                                 </div>
                             </div>
                             <img alt="" src={dashPhoto} className="tw-w-1/4 tw-rounded" />
+                        </div>
+                        <div className="tw-bg-gray-300 tw-min-height-450 tw--mt-64 tw-pt-40">
+                            <div className="flx-row tw-justify-center">
+                                <div className="col-sm-8 tw-text-center">TEST</div>
+                            </div>
                         </div>
                         <div className="mb-5" style={{
                             backgroundImage: '-webkit-linear-gradient(0deg,#766dff 0%,#88f3ff 100%)'
