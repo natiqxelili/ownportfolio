@@ -77,12 +77,13 @@ class Portfolio extends Component {
                             </div>
                             <img alt="" src={dashPhoto} className="tw-w-1/4 tw-rounded" />
                         </div>
-                        <div className="tw-bg-blue-400 tw-opacity-75 tw-pb-10 tw--mt-64 tw-pt-40 tw-border-t-2 tw-border-t-lg tw-border-white tw-border-dashed">
+                        <div className="tw-bg-blue-400 tw-opacity-75 tw--mt-64 tw-pt-40 tw-border-t-2 tw-border-t-lg tw-border-white tw-border-dashed">
                             <div className="flx-row tw-justify-center">
                                 <div className="col-sm-8 tw-text-2xl tw-text-center tw-font-bold tw-text-white tw-text-shadow">
-                                    Hi, I'm Natig Khalili. I am {myAge} years old<br />
-                                    I was born in Ganja but now I live in Baku.<br />
-                                    I'm the frontend-based web-developer. But I also have experience in backend.
+                                    <div className="col-sm-6 tw-pb-10">Hi, I'm Natig Khalili. I am {myAge} years old and I was born in Ganja but now I live in Baku.
+                                        I started my education on information technologies and systems and finished my education life until master degree.
+                                        I'm the frontend-based web-developer. But I also have experiences in backend. Writing new projects or developing applications using different languages.
+                                        I have high experience in the sector of Geographic Information System.</div>
                                 </div>
                             </div>
                         </div>
