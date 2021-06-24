@@ -961,3 +961,7 @@ ul.header-dropdown-menu li:not(:last-child) {
     position: relative;
     border-radius: 6px;
 }
+
+.tw-text-shadow {
+    text-shadow: 2px 2px 4px #000000;
+}

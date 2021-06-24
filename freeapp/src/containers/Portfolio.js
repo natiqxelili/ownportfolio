@@ -23,6 +23,19 @@ class Portfolio extends Component {
         };
     }
 
+    componentDidMount() {
+        this.getAllData();
+    }
+
+    getAllData = () => {
+        let date = new Date();
+        let year = date.getFullYear();
+        let myAge = year - 1995;
+        this.setState({
+            myAge
+        })
+    }
+
     handleChange = (e) => {
         e.target.value && e.target.setCustomValidity("");
         this.setState({
@@ -39,7 +52,7 @@ class Portfolio extends Component {
     };
 
     render() {
-        let { timeline } = this.state;
+        let { timeline, myAge } = this.state;
         return (
             <div
                 className="tw-w-screen tw-h-screen tw-bg-cover tw-bg-no-repeat bg-img-overlay"
@@ -54,7 +67,7 @@ class Portfolio extends Component {
                                 <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-start"><Icon.FiCalendar className="tw-text-blue-700 mr-2" /> 7 May 1995</div>
                                 <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-start"><Icon.FiPhoneCall className="tw-text-blue-700 mr-2" /> +994 70 533 62 22</div>
                                 <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-start"><Icon.FiMail className="tw-text-blue-700 mr-2" /> xelilinatiq@gmail.com</div>
-                                <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-start"><Icon.FiHome className="tw-text-blue-700 mr-2" /> Gandja, Azerbaijan</div>
+                                <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-start"><Icon.FiHome className="tw-text-blue-700 mr-2" /> Ganja, Azerbaijan</div>
                                 {/* Social medias */}
                                 <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-start tw-mt-4">
                                     <a href="https://www.facebook.com/natiq.xelili/" target="blank"><Icon.FiFacebook className="tw-text-blue-700 ml-0 mr-2 brdr-b tw-bg-gray-200 tw-px-2 tw-cursor-pointer" size={40} /></a>
@@ -64,9 +77,13 @@ class Portfolio extends Component {
                             </div>
                             <img alt="" src={dashPhoto} className="tw-w-1/4 tw-rounded" />
                         </div>
-                        <div className="tw-bg-gray-300 tw-min-height-450 tw--mt-64 tw-pt-40">
+                        <div className="tw-bg-blue-400 tw-opacity-75 tw-pb-10 tw--mt-64 tw-pt-40 tw-border-t-2 tw-border-t-lg tw-border-white tw-border-dashed">
                             <div className="flx-row tw-justify-center">
-                                <div className="col-sm-8 tw-text-center">TEST</div>
+                                <div className="col-sm-8 tw-text-2xl tw-text-center tw-font-bold tw-text-white tw-text-shadow">
+                                    Hi, I'm Natig Khalili. I am {myAge} years old<br />
+                                    I was born in Ganja but now I live in Baku.<br />
+                                    I'm the frontend-based web-developer. But I also have experience in backend.
+                                </div>
                             </div>
                         </div>
                         <div className="mb-5" style={{
