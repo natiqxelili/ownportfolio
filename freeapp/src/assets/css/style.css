@@ -965,3 +965,7 @@ ul.header-dropdown-menu li:not(:last-child) {
 .tw-text-shadow {
     text-shadow: 2px 2px 4px #000000;
 }
+
+.tw-h-fit-content {
+    height: fit-content !important;
+}

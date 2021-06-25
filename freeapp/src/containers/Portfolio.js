@@ -55,7 +55,7 @@ class Portfolio extends Component {
         let { timeline, myAge } = this.state;
         return (
             <div
-                className="tw-w-screen tw-h-screen tw-bg-cover tw-bg-no-repeat bg-img-overlay"
+                className="tw-w-screen tw-h-auto tw-bg-cover tw-bg-no-repeat bg-img-overlay"
                 style={{ backgroundImage: `url(${backPhoto})` }}
             >
                 <div className="flx-row">
@@ -79,11 +79,33 @@ class Portfolio extends Component {
                         </div>
                         <div className="tw-bg-blue-400 tw-opacity-75 tw--mt-64 tw-pt-40 tw-border-t-2 tw-border-t-lg tw-border-white tw-border-dashed">
                             <div className="flx-row tw-justify-center">
-                                <div className="col-sm-8 tw-text-2xl tw-text-center tw-font-bold tw-text-white tw-text-shadow">
+                                <div className="col-sm-8 flx-row tw-text-lg tw-text-center tw-font-bold tw-text-white tw-text-shadow">
                                     <div className="col-sm-6 tw-pb-10">Hi, I'm Natig Khalili. I am {myAge} years old and I was born in Ganja but now I live in Baku.
                                         I started my education on information technologies and systems and finished my education life until master degree.
                                         I'm the frontend-based web-developer. But I also have experiences in backend. Writing new projects or developing applications using different languages.
                                         I have high experience in the sector of Geographic Information System.</div>
+                                    <div className="col-sm-6 tw-pb-10 tw-h-fit-content  tw-px-4">
+                                        <label className="tw-text-2xl">Frequently used</label>
+                                        <div className="row tw-justify-center">
+                                            <div className="animated fadeInUp brdr-b tw-px-2 tw-bg-red-700">HTML</div>
+                                            <div className="animated fadeInDown brdr-b tw-px-2 tw-bg-red-400">CSS</div>
+                                            <div className="animated fadeInLeft brdr-b tw-px-2 tw-bg-orange-700">ReactJS</div>
+                                            <div className="animated fadeInLeft brdr-b tw-px-2 tw-bg-orange-900">NodeJS</div>
+                                            <div className="animated fadeInLeft brdr-b tw-px-2 tw-bg-orange-900">ArcGisJS</div>
+                                            <div className="animated fadeInLeft brdr-b tw-px-2 tw-bg-blue-700">Asp.Net</div>
+                                            <div className="animated fadeInLeft brdr-b tw-px-2 tw-bg-blue-900">C#</div>
+                                            <div className="animated fadeInDown brdr-b tw-px-2 tw-bg-black">GIT</div>
+                                            <div className="animated fadeInDown brdr-b tw-px-2 tw-bg-red-600">NPM</div>
+                                        </div>
+                                        <label className="tw-text-2xl tw-pt-2">Sometimes used</label>
+                                        <div className="row tw-justify-center">
+                                            <div className="animated fadeInUp brdr-b tw-px-2 tw-bg-red-700">jQuery</div>
+                                            <div className="animated fadeInUp brdr-b tw-px-2 tw-bg-red-700">Ajax</div>
+                                            <div className="animated fadeInDown brdr-b tw-px-2 tw-bg-red-600">Oracle</div>
+                                            <div className="animated fadeInDown brdr-b tw-px-2 tw-bg-red-600">SASS</div>
+                                            <div className="animated fadeInDown brdr-b tw-px-2 tw-bg-red-600">Photoshop</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
