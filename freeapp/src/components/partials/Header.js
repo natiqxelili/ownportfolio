@@ -5,7 +5,6 @@ import * as userActions from "../../redux/actions/User";
 import { withRouter } from "react-router-dom";
 import * as Icon from "react-icons/fi";
 import { FaUserCircle } from "react-icons/fa";
-import { RiLockPasswordLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
 // import Axios from "../../utils/axios";
 

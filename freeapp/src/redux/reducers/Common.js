@@ -1,8 +1,7 @@
 import { COMMON } from "../constants";
 const initialState = {
     startup: true,
-    loading: {},
-    selectedCompanyID: null
+    loading: {}
 }
 
 export const Common = (state = initialState, action) => {

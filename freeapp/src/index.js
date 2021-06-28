@@ -11,6 +11,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { initStore } from "./redux/store";
 
+import './utils/i18n'
 import App from "./containers/App";
 
 if (document.getElementById("root")) {

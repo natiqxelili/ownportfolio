@@ -4,7 +4,6 @@ import { modal } from "../../redux/actions/Common";
 import Modal from "react-modal";
 import * as Icon from "react-icons/fi";
 import axios from "../../utils/axios";
-import { confirmAlert } from 'react-confirm-alert';
 import { toast } from "react-toastify";
 
 
