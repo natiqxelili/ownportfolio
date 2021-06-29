@@ -98,7 +98,7 @@ class Portfolio extends Component {
                         </div>
                         <div className="flx-row">
                             <div className="tw-w-full tw-flex tw-flex-col tw-overflow-y-auto tw-h-full">
-                                <div className="flx-row tw-bg-white tw-mx-32 tw-mb-20 tw-mt-10 tw-rounded tw-border tw-border-gray-600 p-3 tw-z-10">
+                                <div className="profil-scss animated slideInDown flx-row tw-bg-white tw-mx-32 tw-mb-20 tw-mt-10 tw-rounded tw-border tw-border-gray-600 p-3 tw-z-10">
                                     <div className="tw-flex-1 tw-text-left tw-align-middle tw-m-auto tw-pl-40">
                                         <div className="tw-text-6xl tw-font-serif tw-text-gray-900 tw-font-bold">{t('nameAndSurname')}</div>
                                         <div className="tw-text-2xl tw-text-gray-700">{t('personProfession')}</div>
@@ -124,7 +124,7 @@ class Portfolio extends Component {
                                                 <div className="row tw-justify-center">
                                                     <div className="animated fadeInLeftBig brdr-b tw-px-2 tw-bg-red-700">HTML</div>
                                                     <div className="animated fadeInLeft brdr-b tw-px-2 tw-bg-red-400">CSS</div>
-                                                    <div className="animated flipInX brdr-b tw-px-2 tw-bg-indigo-600">ReactJS</div>
+                                                    <div className="animated bounce brdr-b tw-px-2 tw-bg-indigo-600">ReactJS</div>
                                                     <div className="animated flipInY brdr-b tw-px-2 tw-bg-orange-900">NodeJS</div>
                                                     <div className="animated fadeInUp brdr-b tw-px-2 tw-bg-yellow-500">ArcGisJS</div>
                                                     <div className="animated fadeInDownBig brdr-b tw-px-2 tw-bg-blue-700">Asp.Net</div>

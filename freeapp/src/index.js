@@ -5,6 +5,8 @@ import './assets/css/bootstrap.min.css';
 import './assets/css/style.css';
 import './assets/css/media-responsive.css';
 
+import './assets/scss/style.scss';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
