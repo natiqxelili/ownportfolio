@@ -20,6 +20,100 @@ import flag_rus from "../assets/icons/flag_rus.png";
 
 import { Translation } from 'react-i18next';
 import i18n from "../utils/i18n";
+import Particles from 'react-particles-js';
+
+const particlesoptions = {
+    particles: {
+        number: {
+            value: 50,
+            density: {
+                enable: true,
+                value_area: 1000
+            }
+        },
+        color: {
+            value: ["#BD10E0", "#B8E986", "#50E3C2", "#FFD300", "#E86363"]
+        },
+        shape: {
+            type: "circle",
+            stroke: {
+                width: 0,
+                color: "#b6b2b2"
+            }
+        },
+        opacity: {
+            value: 0.5211089197812949,
+            random: false,
+            anim: {
+                enable: true,
+                speed: 1,
+                opacity_min: 0.1,
+                sync: false
+            }
+        },
+        size: {
+            value: 8.017060304327615,
+            random: true,
+            anim: {
+                enable: true,
+                speed: 15.181158184520175,
+                size_min: 0.1,
+                sync: true
+            }
+        },
+        line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#808080",
+            opacity: 0.4,
+            width: 1
+        },
+        move: {
+            enable: true,
+            speed: 5,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "bounce",
+            bounce: false,
+            attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200
+            }
+        }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: {
+                enable: true,
+                mode: "grab"
+            },
+            onclick: {
+                enable: true,
+                mode: "push"
+            },
+            resize: true
+        },
+        modes: {
+            grab: {
+                distance: 400,
+                line_linked: {
+                    opacity: 1
+                }
+            },
+            repulse: {
+                distance: 200,
+                duration: 0.4
+            },
+            push: {
+                particles_nb: 1
+            }
+        }
+    },
+    retina_detect: true
+};
 
 class Portfolio extends Component {
     constructor() {
@@ -94,13 +188,15 @@ class Portfolio extends Component {
                             </div>
                             {/* <div className={`brdr-b tw-px-2 tw-bg-${currLang === 'aze' ? 'red' : 'gray'}-400 tw-cursor-pointer`} onClick={() => this.changeLanguage("aze")}>AZ<img src={flag_aze} className="tw-ml-1" width={20} alt="aze" /></div>
                             <div className={`brdr-b tw-px-2 tw-bg-${currLang === 'eng' ? 'red' : 'gray'}-400 tw-cursor-pointer`} onClick={() => this.changeLanguage("eng")}>EN<img src={flag_eng} className="tw-ml-1" width={20} alt="eng" /></div>
-                            <div className={`brdr-b tw-px-2 tw-bg-${currLang === 'rus' ? 'red' : 'gray'}-400 tw-cursor-pointer`} onClick={() => this.changeLanguage("rus")}>RU<img src={flag_rus} className="tw-ml-1" width={20} alt="rus" /></div> */}
+                        <div className={`brdr-b tw-px-2 tw-bg-${currLang === 'rus' ? 'red' : 'gray'}-400 tw-cursor-pointer`} onClick={() => this.changeLanguage("rus")}>RU<img src={flag_rus} className="tw-ml-1" width={20} alt="rus" /></div> */}
                         </div>
+
                         <div className="flx-row">
                             <div className="tw-w-full tw-flex tw-flex-col tw-overflow-y-auto tw-h-full">
-                                <div className="profil-scss animated slideInDown flx-row tw-bg-white tw-mx-32 tw-mb-20 tw-mt-10 tw-rounded tw-border tw-border-gray-600 p-3 tw-z-10">
+                                <div className="animated slideInDown flx-row tw-bg-azure tw-mx-32 tw-mb-20 tw-mt-10 tw-rounded tw-border tw-border-gray-600 p-3 tw-z-10">
                                     <div className="tw-flex-1 tw-text-left tw-align-middle tw-m-auto tw-pl-40">
-                                        <div className="tw-text-6xl tw-font-serif tw-text-gray-900 tw-font-bold">{t('nameAndSurname')}</div>
+                                        <Particles className="particles" params={particlesoptions} />
+                                        <div className="tw-text-6xl tw-font-serif tw-text-gray-900 tw-font-bold typewriter">{t('nameAndSurname')}</div>
                                         <div className="tw-text-2xl tw-text-gray-700">{t('personProfession')}</div>
                                         <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-start"><Icon.FiCalendar className="tw-text-blue-700 mr-2" /> 7 May 1995</div>
                                         <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-start"><Icon.FiPhoneCall className="tw-text-blue-700 mr-2" /> +994 70 533 62 22</div>
@@ -115,7 +211,7 @@ class Portfolio extends Component {
                                     </div>
                                     <img alt="" src={dashPhoto} className="tw-w-1/4 tw-rounded" />
                                 </div>
-                                <div className="tw-bg-blue-400 tw-opacity-75 tw--mt-64 tw-pt-40 tw-border-t-2 tw-border-t-lg tw-border-white tw-border-dashed">
+                                <div className="tw-bg-colorfull tw-opacity-75 tw--mt-64 tw-pt-40 tw-border-t-2 tw-border-t-lg tw-border-white tw-border-dashed">
                                     <div className="flx-row tw-justify-center">
                                         <div className="col-sm-8 flx-row tw-text-lg tw-text-center tw-font-bold tw-text-white tw-text-shadow">
                                             <div className="col-sm-6 tw-pb-10">{t('personDescription', { personAge: myAge })}</div>
@@ -250,20 +346,26 @@ class Portfolio extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="tw-w-full tw-bg-blue-700 tw-text-white tw-opacity-75">
-                            <div className="row tw-p-8 tw-border-t-2 tw-border-t-lg tw-border-white tw-border-dashed">
-                                <div className="col-sm-4 tw-text-center">
-                                    <label className="tw-font-bold tw-text-2xl">{t('contact')}</label>
-                                    <div>{t('mail')}: xelilinatiq@gmail.com</div>
-                                    <div>{t('phoneNumber')}: +994 70 533 62 22</div>
+                        <div className="tw-w-full tw-bg-colorfull tw-text-white tw-opacity-75">
+                            <div className="row tw-px-8 tw-py-2 tw-border-t-2 tw-border-t-lg tw-border-white tw-border-dashed">
+                                <div className="col-sm-4 tw-justify-center flx-row tw-items-center">
+                                    <label className="tw-font-bold tw-text-2xl tw-border-b tw-border-white">{t('contact')}</label>
+                                    <div className="tw-px-2 tw-mx-2">
+                                        <div>
+                                            {t('mail')}: xelilinatiq@gmail.com
+                                        </div>
+                                        <div>
+                                            {t('phoneNumber')}: +994 70 533 62 22
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="col-sm-4 tw-text-center">
-                                    <div>{t('createdBy')}</div>
-                                    <div className="tw-text-6xl tw-font-bold tw-text-white tw-text-shadow">{t('nameAndSurname')}</div>
+                                <div className="col-sm-4 tw-text-center flx-row tw-justify-center tw-items-center">
+                                    <div className="tw-border-b tw-border-white">{t('createdBy')}</div>
+                                    <div className="tw-mx-2 tw-text-2xl tw-font-bold tw-text-white tw-text-shadow">{t('nameAndSurname')}</div>
                                 </div>
-                                <div className="col-sm-4 tw-text-center">
-                                    <label className="tw-font-bold tw-text-2xl">{t('socialMedias')}</label>
-                                    <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-center">
+                                <div className="col-sm-4 tw-justify-center flx-row tw-items-center">
+                                    <label className="tw-font-bold tw-text-2xl tw-border-b tw-border-white">{t('socialMedias')}</label>
+                                    <div className="tw-text-lg tw-ml-3 tw-text-gray-700 flx-row tw-items-center tw-justify-center">
                                         <a href="https://www.facebook.com/natiq.xelili/" target="blank"><Icon.FiFacebook className="tw-text-blue-700 ml-0 mr-2 brdr-b tw-bg-gray-200 tw-px-2 tw-cursor-pointer" size={40} /></a>
                                         <a href="https://www.linkedin.com/in/natiq-x%C9%99lili-611b99115/" target="blank"><Icon.FiLinkedin className="tw-text-blue-700 ml-0 mr-2 brdr-b tw-bg-gray-200 tw-px-2 tw-cursor-pointer" size={40} /></a>
                                         <a href="https://www.instagram.com/natiqxelili/" target="blank"><Icon.FiInstagram className="tw-text-red-700 ml-0 mr-2 brdr-b tw-bg-gray-200 tw-px-2 tw-cursor-pointer" size={40} /></a>

@@ -969,3 +969,77 @@ ul.header-dropdown-menu li:not(:last-child) {
 .tw-h-fit-content {
     height: fit-content !important;
 }
+
+.particles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0px;
+    z-index: -1;
+    /* z-index: 1; */
+}
+
+.typewriter {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    /* border-right: .15em solid orange; */
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em;
+    /* Adjust as needed */
+    animation:
+        typing 2.5s steps(120, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+.tw-bg-colorfull {
+    background: linear-gradient(-45deg, #ee7752, #3f00a3, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.tw-bg-azure {
+    background-color: azure !important;
+}
