@@ -192,7 +192,7 @@ class Portfolio extends Component {
                         </div>
 
                         <div className="flx-row">
-                            <div className="tw-w-full tw-flex tw-flex-col tw-overflow-y-auto tw-h-full">
+                            <div className="tw-w-full tw-flex tw-flex-col tw-overflow-y-auto tw-h-full tw-bg">
                                 <div className="animated slideInDown flx-row tw-items-center tw-bg-azure tw-mx-32 tw-mb-20 tw-mt-10 tw-rounded tw-border tw-border-gray-600 p-3 tw-z-10">
                                     <div className="tw-flex-1 tw-text-left tw-align-middle tw-m-auto tw-pl-40">
                                         <Particles className="particles" params={particlesoptions} />
@@ -209,7 +209,7 @@ class Portfolio extends Component {
                                             <a href="https://www.instagram.com/natiqxelili/" target="blank"><Icon.FiInstagram className="tw-text-red-700 ml-0 mr-2 brdr-b tw-bg-gray-200 tw-px-2 tw-cursor-pointer" size={40} /></a>
                                         </div>
                                     </div>
-                                    <img alt="" src={dashPhoto} className="tw-w-1/4 tw-rounded tw-h-fit-content m-r-img" />
+                                    <img alt="" src={dashPhoto} className="tw-w-1/4 tw-rounded tw-h-fit-content" />
                                 </div>
                                 <div className="tw-bg-colorfull tw-opacity-75 tw--mt-64 tw-pt-40 tw-border-t-2 tw-border-t-lg tw-border-white tw-border-dashed">
                                     <div className="flx-row tw-justify-center">
