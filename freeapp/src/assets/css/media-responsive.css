@@ -210,13 +210,3 @@
         background-color: green !important;
     }
 }
-
-@media only screen and (min-width: 2500px) {
-    .m-r-img {
-        width: 10% !important;
-    }
-
-    .tw-bg {
-        background-color: red !important;
-    }
-}

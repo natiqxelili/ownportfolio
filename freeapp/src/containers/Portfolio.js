@@ -209,7 +209,7 @@ class Portfolio extends Component {
                                             <a href="https://www.instagram.com/natiqxelili/" target="blank"><Icon.FiInstagram className="tw-text-red-700 ml-0 mr-2 brdr-b tw-bg-gray-200 tw-px-2 tw-cursor-pointer" size={40} /></a>
                                         </div>
                                     </div>
-                                    <img alt="" src={dashPhoto} className="tw-w-1/4 tw-rounded tw-h-fit-content" />
+                                    <img alt="" src={dashPhoto} className="tw-w-1/4 tw-rounded tw-h-min-content" />
                                 </div>
                                 <div className="tw-bg-colorfull tw-opacity-75 tw--mt-64 tw-pt-40 tw-border-t-2 tw-border-t-lg tw-border-white tw-border-dashed">
                                     <div className="flx-row tw-justify-center">
