@@ -192,7 +192,7 @@ class Portfolio extends Component {
                         </div>
 
                         <div className="flx-row">
-                            <div className="tw-w-full tw-flex tw-flex-col tw-overflow-y-auto tw-h-full tw-bg">
+                            <div className="tw-w-full tw-flex tw-flex-col tw-overflow-y-auto tw-h-full">
                                 <div className="animated slideInDown flx-row tw-items-center tw-bg-azure tw-mx-32 tw-mb-20 tw-mt-10 tw-rounded tw-border tw-border-gray-600 p-3 tw-z-10">
                                     <div className="tw-flex-1 tw-text-left tw-align-middle tw-m-auto tw-pl-40">
                                         <Particles className="particles" params={particlesoptions} />

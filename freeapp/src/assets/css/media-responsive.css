@@ -59,14 +59,6 @@
     .tw-mb-20 {
         margin-bottom: 1rem !important;
     }
-
-    .m-r-img {
-        width: 35% !important;
-    }
-
-    .tw-bg {
-        background-color: orange !important;
-    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -98,14 +90,6 @@
 
     .tw-mb-20 {
         margin-bottom: 2rem !important;
-    }
-
-    .m-r-img {
-        width: 35% !important;
-    }
-
-    .tw-bg {
-        background-color: yellow !important;
     }
 }
 
@@ -140,14 +124,6 @@
         margin-bottom: 3rem !important;
     }
 
-    .m-r-img {
-        width: 30% !important;
-
-    }
-
-    .tw-bg {
-        background-color: purple !important;
-    }
 
 }
 
@@ -178,13 +154,6 @@
         margin-bottom: 4rem !important;
     }
 
-    .m-r-img {
-        width: 30% !important;
-    }
-
-    .tw-bg {
-        background-color: blue !important;
-    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -202,11 +171,4 @@
         margin-bottom: 5rem !important;
     }
 
-    .m-r-img {
-        width: 25% !important;
-    }
-
-    .tw-bg {
-        background-color: green !important;
-    }
 }
