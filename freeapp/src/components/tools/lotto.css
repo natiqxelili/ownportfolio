@@ -1,0 +1,83 @@
+       .clearfix {
+           clear: both;
+       }
+
+       .floatfix:after {
+           display: block;
+           content: "";
+           clear: both;
+       }
+
+       h1 {
+           text-align: center;
+           color: #ef6d3b;
+           text-shadow: 1px 1px 1px #000;
+           font-family: "Chewy";
+           font-size: 50px;
+       }
+
+       .position {
+           width: 100%;
+           margin: 0 auto;
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           padding: 2rem 3.5rem 1rem 0.5rem;
+       }
+
+       .wrapper {
+           width: 50%;
+           background-color: #90c5a9;
+           overflow: hidden;
+           padding: 20px;
+           border-radius: 20px;
+           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+           margin-left: 50px;
+       }
+
+       .wrapper .ball {
+           width: 40px;
+           height: 40px;
+           text-align: center;
+           line-height: 40px;
+           color: #3d3c3a;
+           border-radius: 100%;
+           float: left;
+           background-color: #fff;
+           margin: 10px;
+           font-weight: 500;
+           box-shadow: 1px 1px 0.5px #000;
+       }
+
+       #generate {
+           display: block;
+           background-color: #ef6d3b;
+           outline: none;
+           padding: 15px;
+           border-radius: 10px;
+           font-size: 20px;
+           margin: 50px auto;
+           width: 120px;
+           box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+           text-transform: uppercase;
+           font-family: "Chewy";
+           color: #3f2860;
+       }
+
+       #history {
+           text-align: center;
+           width: 50%;
+           height: 420px;
+           padding: 20px 0;
+           border-radius: 20px;
+           background-color: #90c5a9;
+           float: left;
+           margin-left: 50px;
+           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+           overflow: auto;
+       }
+
+       #history p {
+           font-weight: 500;
+           color: #3d3c3a;
+       }

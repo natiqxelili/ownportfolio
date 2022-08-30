@@ -22,6 +22,7 @@ import flag_rus from "../assets/icons/flag_rus.png";
 import { Translation } from "react-i18next";
 import i18n from "../utils/i18n";
 import Particles from "react-particles-js";
+import Lotto from "../components/tools/Lotto"
 
 const particlesoptions = {
   particles: {
@@ -124,6 +125,7 @@ class Portfolio extends Component {
       password: "",
       timeline: "education",
       currLang: "eng",
+      tool: "portfolio"
     };
   }
 
@@ -163,14 +165,14 @@ class Portfolio extends Component {
   };
 
   render() {
-    let { timeline, myAge, currLang } = this.state;
+    let { timeline, myAge, currLang, tool } = this.state;
     let langs = {
       aze: flag_aze,
       rus: flag_rus,
       eng: flag_eng,
     };
     return (
-      <Translation>
+      tool === "lotto" ? <Lotto /> : <Translation>
         {(t) => (
           <div
             className="tw-w-screen tw-h-auto tw-bg-cover tw-bg-no-repeat bg-img-overlay"
@@ -199,9 +201,8 @@ class Portfolio extends Component {
                 >
                   <button
                     onClick={() => this.changeLanguage("aze")}
-                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${
-                      currLang === "aze" ? "red-400" : "gray-700"
-                    } tw-cursor-pointer`}
+                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${currLang === "aze" ? "red-400" : "gray-700"
+                      } tw-cursor-pointer`}
                     type="button"
                   >
                     AZ
@@ -214,9 +215,8 @@ class Portfolio extends Component {
                   </button>
                   <button
                     onClick={() => this.changeLanguage("eng")}
-                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${
-                      currLang === "eng" ? "red-400" : "gray-700"
-                    } tw-cursor-pointer`}
+                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${currLang === "eng" ? "red-400" : "gray-700"
+                      } tw-cursor-pointer`}
                     type="button"
                   >
                     EN
@@ -229,9 +229,8 @@ class Portfolio extends Component {
                   </button>
                   <button
                     onClick={() => this.changeLanguage("rus")}
-                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${
-                      currLang === "rus" ? "red-400" : "gray-700"
-                    } tw-cursor-pointer`}
+                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${currLang === "rus" ? "red-400" : "gray-700"
+                      } tw-cursor-pointer`}
                     type="button"
                   >
                     RU
@@ -308,6 +307,19 @@ class Portfolio extends Component {
                           size={40}
                         />
                       </a>
+                    </div>
+                    {/* Tools */}
+                    <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-start tw-mt-4">
+                      <button
+                        onClick={() => this.setState({ tool: "lotto" })}
+                        target="blank"
+                        className="flx-row tw-items-center tw-text-orange-500"
+                      >
+                        <Icon.FiStopCircle
+                          className="tw-text-orange-500 ml-0 mr-2 brdr-b tw-bg-gray-200 tw-px-2 tw-cursor-pointer"
+                          size={40}
+                        /> Lotto
+                      </button>
                     </div>
                   </div>
                   <img
@@ -387,11 +399,10 @@ class Portfolio extends Component {
                   <div className="flx-row tw-justify-center tw-py-20">
                     <button
                       type="button"
-                      className={`btn btn-lg ${
-                        timeline === "education"
-                          ? "btn-light"
-                          : "tw-bg-blue-300 tw-text-white"
-                      } tw-text-lg mx-1 tw-px-20 tw-py-4`}
+                      className={`btn btn-lg ${timeline === "education"
+                        ? "btn-light"
+                        : "tw-bg-blue-300 tw-text-white"
+                        } tw-text-lg mx-1 tw-px-20 tw-py-4`}
                       onClick={() => {
                         this.setState({ timeline: "education" });
                       }}
@@ -400,11 +411,10 @@ class Portfolio extends Component {
                     </button>
                     <button
                       type="button"
-                      className={`btn btn-lg ${
-                        timeline === "work"
-                          ? "btn-light"
-                          : "tw-bg-blue-300 tw-text-white"
-                      } tw-text-lg mx-1 tw-px-20 tw-py-4`}
+                      className={`btn btn-lg ${timeline === "work"
+                        ? "btn-light"
+                        : "tw-bg-blue-300 tw-text-white"
+                        } tw-text-lg mx-1 tw-px-20 tw-py-4`}
                       onClick={() => {
                         this.setState({ timeline: "work" });
                       }}

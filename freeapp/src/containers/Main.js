@@ -22,7 +22,7 @@ import PasswordReset from "../components/modals/PasswordReset";
 
 class Main extends React.Component {
     render() {
-        const { rightbars, modals } = this.props.state.common;
+        const { modals } = this.props.state.common;
         return (
             <React.Fragment>
                 <div className="tw-flex tw-flex-col tw-bg-primary tw-overflow-hidden tw-w-full tw-font-proxima-nova">
