@@ -22,7 +22,6 @@ import flag_rus from "../assets/icons/flag_rus.png";
 import { Translation } from "react-i18next";
 import i18n from "../utils/i18n";
 import Particles from "react-particles-js";
-import Lotto from "../components/tools/Lotto";
 
 const particlesoptions = {
   particles: {
@@ -124,8 +123,7 @@ class Portfolio extends Component {
       username: "",
       password: "",
       timeline: "education",
-      currLang: "eng",
-      tool: "portfolio"
+      currLang: "eng"
     };
   }
 
@@ -165,14 +163,14 @@ class Portfolio extends Component {
   };
 
   render() {
-    let { timeline, myAge, currLang, tool } = this.state;
+    let { timeline, myAge, currLang } = this.state;
     let langs = {
       aze: flag_aze,
       rus: flag_rus,
       eng: flag_eng,
     };
     return (
-      tool === "lotto" ? <Lotto /> : <Translation>
+      <Translation>
         {(t) => (
           <div
             className="tw-w-screen tw-h-auto tw-bg-cover tw-bg-no-repeat bg-img-overlay"
@@ -308,19 +306,6 @@ class Portfolio extends Component {
                         />
                       </a>
                     </div>
-                    {/* Tools */}
-                    <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-start tw-mt-4">
-                      <button
-                        onClick={() => this.setState({ tool: "lotto" })}
-                        target="blank"
-                        className="flx-row tw-items-center tw-text-orange-500 tw-outline-none"
-                      >
-                        <Icon.FiStopCircle
-                          className="tw-text-orange-500 ml-0 mr-2 brdr-b tw-bg-gray-200 tw-px-2 tw-cursor-pointer"
-                          size={40}
-                        /> Lotto
-                      </button>
-                    </div>
                   </div>
                   <img
                     alt=""
@@ -387,6 +372,18 @@ class Portfolio extends Component {
                         </div>
                       </div>
                     </div>
+                  </div>
+                  {/* Tools */}
+                  <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-center tw-m-4">
+                    <a
+                      href="/lotto"
+                      className="flx-row tw-items-center tw-text-orange-500 tw-outline-none tw-font-bold tw-shadow-md px-2 tw-border tw-border-orange-500 tw-rounded"
+                    >
+                      <Icon.FiStopCircle
+                        className="tw-text-orange-500 ml-0 mr-2 brdr-b tw-bg-gray-200 tw-px-2 tw-cursor-pointer"
+                        size={40}
+                      /> Lotto
+                    </a>
                   </div>
                 </div>
                 <div

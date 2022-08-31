@@ -41,7 +41,7 @@ export default class Lotto extends Component {
         const { numbers, history, current, animate } = this.state;
         return (
             <div>
-                <h1 className='mt-5'>Lotereya</h1>
+                <h1 className='mt-5'><a className='theext' href='/'>khalili.az</a> - Lotereya</h1>
                 <button type="button" id="generate" onClick={() => this.getNumber()}>Qorxmaz Əlili</button>
                 {current && <div className='flx-row tw-justify-center'>
                     <div className={`animated ${animate} tw-bg-white tw-w-24 tw-h-24 flx-row tw-justify-center tw-items-center tw-text-6xl tw-font-semibold tw-text-orange-600 tw-rounded-full tw-border-4 tw-border-orange-600`}>{current}</div>

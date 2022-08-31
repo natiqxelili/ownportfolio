@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import Modal from "react-modal";
 import { me } from "../redux/actions/User";
@@ -15,6 +15,8 @@ import Header from "../components/partials/Header";
 
 import Portfolio from "./Portfolio";
 import Startup from "./Startup";
+import Lotto from "../components/tools/Lotto";
+import Error from "../components/error/Index";
 
 
 Modal.setAppElement("#root");
@@ -34,7 +36,12 @@ class App extends React.Component {
                             <Main />
                         </div>
                     </div>)
-                    : <Portfolio />
+                    :
+                    <Switch>
+                        <Route exact path="/" component={Portfolio} />
+                        <Route path="/lotto" component={Lotto} />
+                        <Route path="/*" component={Error} />
+                    </Switch>
                 }
                 <ToastContainer
                     toastClassName="tw-px-5 tw-text-sm"
