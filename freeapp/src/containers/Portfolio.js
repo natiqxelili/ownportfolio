@@ -313,7 +313,7 @@ class Portfolio extends Component {
                       <button
                         onClick={() => this.setState({ tool: "lotto" })}
                         target="blank"
-                        className="flx-row tw-items-center tw-text-orange-500"
+                        className="flx-row tw-items-center tw-text-orange-500 tw-outline-none"
                       >
                         <Icon.FiStopCircle
                           className="tw-text-orange-500 ml-0 mr-2 brdr-b tw-bg-gray-200 tw-px-2 tw-cursor-pointer"

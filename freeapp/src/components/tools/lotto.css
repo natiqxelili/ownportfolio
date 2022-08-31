@@ -29,7 +29,7 @@
            width: 50%;
            background-color: #90c5a9;
            overflow: hidden;
-           padding: 20px;
+           padding: 20px 8px 20px 20px;
            border-radius: 20px;
            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
            margin-left: 50px;
@@ -57,18 +57,22 @@
            border-radius: 10px;
            font-size: 20px;
            margin: 50px auto;
-           width: 120px;
+           width: 150px;
            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-           text-transform: uppercase;
            font-family: "Chewy";
            color: #3f2860;
+           
+       }
+
+       #generate:hover {
+        background-color: #ffc6b0;
        }
 
        #history {
            text-align: center;
            width: 50%;
-           height: 420px;
-           padding: 20px 0;
+           height: auto;
+           padding: 40px;
            border-radius: 20px;
            background-color: #90c5a9;
            float: left;
@@ -78,6 +82,12 @@
        }
 
        #history p {
-           font-weight: 500;
-           color: #3d3c3a;
+           color: rgb(100, 86, 86);
+           font-weight: bold;
+           font-size: 1.5rem;
+       }
+
+       .activeBall {
+            background-color: #fa8b60!important;
+            color: white!important;
        }
