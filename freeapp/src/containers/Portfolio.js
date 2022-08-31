@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, lazy, Suspense } from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import * as commonActions from "../redux/actions/Common";
@@ -22,7 +22,7 @@ import flag_rus from "../assets/icons/flag_rus.png";
 import { Translation } from "react-i18next";
 import i18n from "../utils/i18n";
 import Particles from "react-particles-js";
-import Lotto from "../components/tools/Lotto"
+import Lotto from "../components/tools/Lotto";
 
 const particlesoptions = {
   particles: {
