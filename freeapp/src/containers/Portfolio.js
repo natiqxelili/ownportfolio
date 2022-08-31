@@ -377,12 +377,21 @@ class Portfolio extends Component {
                   <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-center tw-m-4">
                     <a
                       href="/lotto"
-                      className="flx-row tw-items-center tw-text-orange-500 tw-outline-none tw-font-bold tw-shadow-md px-2 tw-border tw-border-orange-500 tw-rounded"
+                      className="flx-row tw-items-center tw-bg-gray-400 tw-text-orange-500 tw-outline-none tw-font-bold tw-shadow-md pl-2 pr-3 tw-border tw-border-orange-500 tw-rounded"
                     >
                       <Icon.FiStopCircle
                         className="tw-text-orange-500 ml-0 mr-2 brdr-b tw-bg-gray-200 tw-px-2 tw-cursor-pointer"
                         size={40}
                       /> Lotto
+                    </a>
+                    <a
+                      href="/paper"
+                      className="flx-row tw-items-center tw-bg-gray-400 ml-2 tw-text-blue-500 tw-outline-none tw-font-bold tw-shadow-md pl-2 pr-3 tw-border tw-border-blue-500 tw-rounded"
+                    >
+                      <Icon.FiFile
+                        className="tw-text-blue-500 ml-0 mr-2 brdr-b tw-bg-gray-200 tw-px-2 tw-cursor-pointer"
+                        size={40}
+                      /> Paper
                     </a>
                   </div>
                 </div>
