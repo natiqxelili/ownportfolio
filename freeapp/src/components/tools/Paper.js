@@ -5,10 +5,10 @@ export default class Paper extends Component {
     render() {
         return (
             <div>
-                <h1 className='mt-5'><a className='theext' href='/'>khalili.az</a> - Paper</h1>
-                <div className="paper">
+                <h1 className='mt-5'><a className='theext' href='/'>khalili.az</a> <span className='tw-text-gray-500'>-</span> Paper</h1>
+                <div className="paper" style={{ height: "calc(100vh - 150px)" }}>
                     <div className="paper-content">
-                        <textarea autofocus>Hello world !&#10;Here's a paper textarea tag.</textarea>
+                        <textarea autoFocus></textarea>
                     </div>
                 </div>
             </div>

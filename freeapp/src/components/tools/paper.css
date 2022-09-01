@@ -1,18 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-@import url(https://fonts.googleapis.com/css?family=Handlee);
-
-body {
-    margin: 40px 0 0;
-    background: #91D1D3;
-    font-family: 'Roboto', sans-serif;
-}
+@import url(https://fonts.googleapis.com/css?family=Caveat);
 
 .paper {
     position: relative;
     width: 90%;
     max-width: 800px;
     min-width: 400px;
-    height: 480px;
     margin: 0 auto;
     background: #fafafa;
     border-radius: 10px;
@@ -54,9 +47,9 @@ body {
     outline: 0;
     background: transparent;
     color: mediumblue;
-    font-family: 'Handlee', cursive;
+    font-family: 'Caveat', cursive;
     font-weight: bold;
     font-size: 18px;
     box-sizing: border-box;
-z-index: 1;
+    z-index: 1;
 }
