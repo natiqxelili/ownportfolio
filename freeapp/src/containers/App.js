@@ -18,6 +18,7 @@ import Startup from "./Startup";
 import Lotto from "../components/tools/Lotto";
 import Error from "../components/error/Index";
 import Paper from "../components/tools/Paper";
+import Domino from "../components/tools/Domino";
 
 
 Modal.setAppElement("#root");
@@ -42,6 +43,7 @@ class App extends React.Component {
                         <Route exact path="/" component={Portfolio} />
                         <Route path="/lotto" component={Lotto} />
                         <Route path="/paper" component={Paper} />
+                        <Route path="/domino" component={Domino} />
                         <Route path="/*" component={Error} />
                     </Switch>
                 }

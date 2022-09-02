@@ -1,0 +1,12 @@
+.border-ol {
+    border-radius: 0.2rem 0 0 0.2rem!important;
+}
+
+.border-or {
+    border-radius: 0 0.2rem 0.2rem 0!important;
+}
+
+.py-2px {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
