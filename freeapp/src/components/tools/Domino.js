@@ -122,11 +122,11 @@ export default class Domino extends Component {
             <div className='flx-column'>
                 {players[index].edit ? <div className='flx-row tw-items-center'>
                     <form className='tw-w-full flx-row tw-items-center' onSubmit={() => { this.savePlayer(players[index]) }}>
-                        <input className='form-control form-control-sm text-center tw-border-0 border-ol' onChange={e => this.handleChange(e, index)} value={players[index].name || "New Player"}></input><button className='tw-bg-white py-1 px-2 border-or' type='submit' ><FiSave size={23} className="tw-text-green-600" /></button>
+                        <input className='form-control form-control-sm text-center tw-border-0 border-ol' onChange={e => this.handleChange(e, index)} value={players[index].name}></input><button className='tw-bg-white py-1 px-2 border-or' type='submit' ><FiSave size={23} className="tw-text-green-600" /></button>
                     </form>
                 </div>
                     : <div className='row mx-0 tw-bg-white tw-rounded py-1'>
-                        <div className='col-md-auto tw-overflow-y-auto'>{players[index].name || "Player 1"}</div>
+                        <div className='col-md-auto tw-overflow-y-auto'>{players[index].name || "New Player"}</div>
                         <div className='col flx-row tw-justify-end tw-items-center my-1'>
                             <FiEdit3 size={20} className="tw-text-orange-600 mx-1 tw-cursor-pointer svgIcon" onClick={() => this.editPlayer(players[index])} />
                             <FiTrash2 size={20} className="tw-text-red-600 mx-1 tw-cursor-pointer svgIcon" onClick={() => this.changePlayerCount(-1, players[index])} />
@@ -149,8 +149,10 @@ export default class Domino extends Component {
                     <div className={`col-${playerCount == 2 ? '2 pr-0 pl-1' : playerCount == 3 ? '4 pr-0 pl-1' : '6 pr-0 pl-1'} mt-1 flx-row`}><span className='tw-flex-1 py-1 tw-bg-blue-100 tw-border-2 tw-border-blue-700 tw-text-blue-700 tw-font-bold tw-rounded flx-row tw-justify-center tw-items-center tw-cursor-pointer' onClick={() => this.undoPoint(index)}><ImUndo2 size={20} /></span></div>
                 </div>
                 <div className='flx-row tw-justify-center tw-items-center mt-3 mx-0'>
-                    <div className='tw-bg-blue-100 tw-text-6xl px-5 py-1 tw-border-2 tw-border-dashed tw-border-blue-700 tw-text-blue-700 tw-font-semibold'>{players[index].point}</div>
+                    <div className='tw-bg-blue-100 tw-text-6xl min-vw-40 px-2 py-1 tw-border-2 tw-border-dashed tw-border-blue-700 tw-text-blue-700 tw-font-semibold tw-select-none'>{players[index].point}</div>
                 </div>
+                <label className='tw-text-left mt-2 mb-1 tw-text-blue-900 tw-font-bold tw-text-2xl'>Tarixçə</label>
+                <textarea className='paperArea px-3 py-2 tw-text-red-700 tw-font-bold' defaultValue={players[index].pointHistory.join(", ")}></textarea>
             </div>
         </div>
     }

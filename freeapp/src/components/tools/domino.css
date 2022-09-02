@@ -10,3 +10,21 @@
     padding-top: 2px;
     padding-bottom: 2px;
 }
+
+
+.min-vw-40 {
+    min-width: 40%;
+}
+
+.paperArea {
+  font:20px 'Gloria Hallelujah', cursive; 
+  line-height:1.5;
+  border:0;
+  border-radius:3px;
+  background: linear-gradient(#F9EFAF, #F7E98D);
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  overflow:hidden;
+  transition:box-shadow 0.5s ease;
+}
+.paperArea:hover { box-shadow:0 5px 8px rgba(0,0,0,0.15); }
+.paperArea:focus { box-shadow:0 5px 12px rgba(0,0,0,0.2); outline:none; }
