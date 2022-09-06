@@ -149,10 +149,10 @@ export default class Domino extends Component {
                     <div className={`col-${playerCount == 2 ? '2 pr-0 pl-1' : playerCount == 3 ? '4 pr-0 pl-1' : '6 pr-0 pl-1'} mt-1 flx-row`}><span className='tw-flex-1 py-1 tw-bg-blue-100 tw-border-2 tw-border-blue-700 tw-text-blue-700 tw-font-bold tw-rounded flx-row tw-justify-center tw-items-center tw-cursor-pointer' onClick={() => this.undoPoint(index)}><ImUndo2 size={20} /></span></div>
                 </div>
                 <div className='flx-row tw-justify-center tw-items-center mt-3 mx-0'>
-                    <div className='tw-bg-blue-100 tw-text-6xl min-vw-40 px-2 py-1 tw-border-2 tw-border-dashed tw-border-blue-700 tw-text-blue-700 tw-font-semibold tw-select-none'>{players[index].point}</div>
+                    <div className={`${players[index].point < 225 ? 'tw-bg-red-300' : players[index].point >= 365 ? 'tw-bg-green-300' : 'tw-bg-blue-100'} tw-text-6xl min-vw-40 px-2 py-1 tw-border-2 tw-border-dashed tw-border-blue-700 tw-text-blue-700 tw-font-semibold tw-select-none`}>{players[index].point}</div>
                 </div>
                 <label className='tw-text-left mt-2 mb-1 tw-text-blue-900 tw-font-bold tw-text-2xl'>Tarixçə</label>
-                <textarea className='paperArea px-3 py-2 tw-text-red-700 tw-font-bold' defaultValue={players[index].pointHistory.join(", ")}></textarea>
+                <div className='paperArea px-3 py-2 tw-text-red-700 tw-font-bold'>{players[index].pointHistory.join(", ")}</div>
             </div>
         </div>
     }
@@ -161,7 +161,7 @@ export default class Domino extends Component {
         const { playerCount } = this.state;
         return (
             <div>
-                <h1 className='mt-5'><a className='theext' href='/'>khalili.az</a> <span className='tw-text-gray-500'>-</span> Domino</h1>
+                <div className='mt-3 tw-text-6xl tw-text-center'><a className='theext' href='/'>khalili.az</a> <span className='tw-text-gray-500'>-</span> Domino</div>
                 <div className='flx-row'>
                     <button className='flx-row tw-items-center tw-text-lg tw-bg-orange-500 tw-text-white px-2 py-2px tw-border tw-border-white tw-rounded mx-4 hover:tw-bg-orange-300 hover:tw-text-gray-900 tw-cursor-pointer' onClick={() => this.changePlayerCount(1)}><HiOutlineUserAdd size={20} className="mr-1" />Oyunçu əlavə et</button>
                 </div>
