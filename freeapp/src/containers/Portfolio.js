@@ -124,7 +124,7 @@ class Portfolio extends Component {
       username: "",
       password: "",
       timeline: "education",
-      currLang: "eng"
+      currLang: "eng",
     };
   }
 
@@ -200,8 +200,9 @@ class Portfolio extends Component {
                 >
                   <button
                     onClick={() => this.changeLanguage("aze")}
-                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${currLang === "aze" ? "red-400" : "gray-700"
-                      } tw-cursor-pointer`}
+                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${
+                      currLang === "aze" ? "red-400" : "gray-700"
+                    } tw-cursor-pointer`}
                     type="button"
                   >
                     AZ
@@ -214,8 +215,9 @@ class Portfolio extends Component {
                   </button>
                   <button
                     onClick={() => this.changeLanguage("eng")}
-                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${currLang === "eng" ? "red-400" : "gray-700"
-                      } tw-cursor-pointer`}
+                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${
+                      currLang === "eng" ? "red-400" : "gray-700"
+                    } tw-cursor-pointer`}
                     type="button"
                   >
                     EN
@@ -228,8 +230,9 @@ class Portfolio extends Component {
                   </button>
                   <button
                     onClick={() => this.changeLanguage("rus")}
-                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${currLang === "rus" ? "red-400" : "gray-700"
-                      } tw-cursor-pointer`}
+                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${
+                      currLang === "rus" ? "red-400" : "gray-700"
+                    } tw-cursor-pointer`}
                     type="button"
                   >
                     RU
@@ -375,7 +378,7 @@ class Portfolio extends Component {
                     </div>
                   </div>
                   {/* Tools */}
-                  <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-center tw-m-4">
+                  {/* <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-center tw-m-4">
                     <a
                       href="/lotto"
                       className="flx-row tw-items-center tw-bg-gray-400 tw-text-orange-500 tw-outline-none tw-font-bold tw-shadow-md pl-2 pr-3 tw-border-2 tw-border-orange-500 tw-rounded"
@@ -403,7 +406,7 @@ class Portfolio extends Component {
                         size={30}
                       /> Dominoes
                     </a>
-                  </div>
+                  </div> */}
                 </div>
                 <div
                   className=""
@@ -415,10 +418,11 @@ class Portfolio extends Component {
                   <div className="flx-row tw-justify-center tw-py-20">
                     <button
                       type="button"
-                      className={`btn btn-lg ${timeline === "education"
-                        ? "btn-light"
-                        : "tw-bg-blue-300 tw-text-white"
-                        } tw-text-lg mx-1 tw-px-20 tw-py-4`}
+                      className={`btn btn-lg ${
+                        timeline === "education"
+                          ? "btn-light"
+                          : "tw-bg-blue-300 tw-text-white"
+                      } tw-text-lg mx-1 tw-px-20 tw-py-4`}
                       onClick={() => {
                         this.setState({ timeline: "education" });
                       }}
@@ -427,10 +431,11 @@ class Portfolio extends Component {
                     </button>
                     <button
                       type="button"
-                      className={`btn btn-lg ${timeline === "work"
-                        ? "btn-light"
-                        : "tw-bg-blue-300 tw-text-white"
-                        } tw-text-lg mx-1 tw-px-20 tw-py-4`}
+                      className={`btn btn-lg ${
+                        timeline === "work"
+                          ? "btn-light"
+                          : "tw-bg-blue-300 tw-text-white"
+                      } tw-text-lg mx-1 tw-px-20 tw-py-4`}
                       onClick={() => {
                         this.setState({ timeline: "work" });
                       }}
