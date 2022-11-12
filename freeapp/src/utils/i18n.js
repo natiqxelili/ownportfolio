@@ -32,6 +32,7 @@ const resources = {
       createdBy: "created by",
       socialMedias: "Social medias",
       now: "NOW",
+      hasBaby: "Children: 1 daughter"
     },
   },
   aze: {
@@ -61,6 +62,7 @@ const resources = {
       createdBy: "hazırladı",
       socialMedias: "Sosial şəbəkələr",
       now: "İNDİ",
+      hasBaby: "Övladlar: 1 qızı"
     },
   },
   rus: {
@@ -88,6 +90,7 @@ const resources = {
       createdBy: "создано",
       socialMedias: "Социальные медиа",
       now: "СЕЙЧАС",
+      hasBaby: "Дети: 1 дочь"
     },
   },
 };

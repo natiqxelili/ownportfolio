@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import * as commonActions from "../redux/actions/Common";
 import * as userActions from "../redux/actions/User";
 import * as Icon from "react-icons/fi";
+import { FaBaby } from "react-icons/fa"
 import { GiDominoTiles } from "react-icons/gi";
 
 //Images
@@ -200,9 +201,8 @@ class Portfolio extends Component {
                 >
                   <button
                     onClick={() => this.changeLanguage("aze")}
-                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${
-                      currLang === "aze" ? "red-400" : "gray-700"
-                    } tw-cursor-pointer`}
+                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${currLang === "aze" ? "red-400" : "gray-700"
+                      } tw-cursor-pointer`}
                     type="button"
                   >
                     AZ
@@ -215,9 +215,8 @@ class Portfolio extends Component {
                   </button>
                   <button
                     onClick={() => this.changeLanguage("eng")}
-                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${
-                      currLang === "eng" ? "red-400" : "gray-700"
-                    } tw-cursor-pointer`}
+                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${currLang === "eng" ? "red-400" : "gray-700"
+                      } tw-cursor-pointer`}
                     type="button"
                   >
                     EN
@@ -230,9 +229,8 @@ class Portfolio extends Component {
                   </button>
                   <button
                     onClick={() => this.changeLanguage("rus")}
-                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${
-                      currLang === "rus" ? "red-400" : "gray-700"
-                    } tw-cursor-pointer`}
+                    className={`dropdown-item tw-shadow-none tw-outline-none brdr-b tw-px-2 tw-text-white tw-bg-${currLang === "rus" ? "red-400" : "gray-700"
+                      } tw-cursor-pointer`}
                     type="button"
                   >
                     RU
@@ -279,6 +277,10 @@ class Portfolio extends Component {
                     <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-start">
                       <Icon.FiHome className="tw-text-blue-700 mr-2" />{" "}
                       {t("personPlace")}
+                    </div>
+                    <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-start">
+                      <FaBaby className="tw-text-blue-700 mr-2" />{" "}
+                      <a className="tw-cursor-pointer tw-outline-none tw-text-gray-700" href="http://asmar.khalili.az/" target="_blank" rel="noreferrer">{t("hasBaby")}</a>
                     </div>
                     {/* Social medias */}
                     <div className="tw-text-lg tw-text-gray-700 flx-row tw-items-center tw-justify-start tw-mt-4">
@@ -418,11 +420,10 @@ class Portfolio extends Component {
                   <div className="flx-row tw-justify-center tw-py-20">
                     <button
                       type="button"
-                      className={`btn btn-lg ${
-                        timeline === "education"
-                          ? "btn-light"
-                          : "tw-bg-blue-300 tw-text-white"
-                      } tw-text-lg mx-1 tw-px-20 tw-py-4`}
+                      className={`btn btn-lg ${timeline === "education"
+                        ? "btn-light"
+                        : "tw-bg-blue-300 tw-text-white"
+                        } tw-text-lg mx-1 tw-px-20 tw-py-4`}
                       onClick={() => {
                         this.setState({ timeline: "education" });
                       }}
@@ -431,11 +432,10 @@ class Portfolio extends Component {
                     </button>
                     <button
                       type="button"
-                      className={`btn btn-lg ${
-                        timeline === "work"
-                          ? "btn-light"
-                          : "tw-bg-blue-300 tw-text-white"
-                      } tw-text-lg mx-1 tw-px-20 tw-py-4`}
+                      className={`btn btn-lg ${timeline === "work"
+                        ? "btn-light"
+                        : "tw-bg-blue-300 tw-text-white"
+                        } tw-text-lg mx-1 tw-px-20 tw-py-4`}
                       onClick={() => {
                         this.setState({ timeline: "work" });
                       }}
